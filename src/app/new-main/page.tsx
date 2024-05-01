@@ -1,14 +1,14 @@
-"use client"
+
+'use client'
 import createSidebarMenu from "@/utils/createSidebar";
-import { css } from "../../styled-system/css";
+import { css } from "../../../styled-system/css";
 import { useSelectedLayoutSegment } from "next/navigation";
 import Sidebar from "@/components/SIdebar";
+import MainSidebar from "@/components/new/MainSidebar";
 
 
-export default function Home() {
-  const sidebarMenu = createSidebarMenu('main')
+export default function Detail() {
   const screenType = useSelectedLayoutSegment();
-
 
   return (
     <main className={css({
@@ -16,7 +16,7 @@ export default function Home() {
       gridTemplateColumns: '260px auto',
       height: '100%'
     })}>
-      <Sidebar sidebarMenu={sidebarMenu} contentNavValue={screenType} />
+      <MainSidebar contentNavValue={screenType} />
       <div className={css({
         background: '#f1f1f1',
       })}>컨텐츠</div>

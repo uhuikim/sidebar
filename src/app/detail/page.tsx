@@ -1,14 +1,14 @@
-"use client"
+
+'use client'
 import createSidebarMenu from "@/utils/createSidebar";
-import { css } from "../../styled-system/css";
+import { css } from "../../../styled-system/css";
 import { useSelectedLayoutSegment } from "next/navigation";
 import Sidebar from "@/components/SIdebar";
 
 
-export default function Home() {
-  const sidebarMenu = createSidebarMenu('main')
+export default function Detail() {
+  const sidebarMenu = createSidebarMenu('detail')
   const screenType = useSelectedLayoutSegment();
-
 
   return (
     <main className={css({
